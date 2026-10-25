@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Faris | Official Profile</title>
+<meta name="description" content="Faris's personal website and social media links.">
+<meta name="theme-color" content="#080811">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #080811;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: .3;
+    z-index: 0;
+    pointer-events: none;
+    animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+.glow.one {
+    background: #8b00ff;
+    top: -100px;
+    right: -80px;
+}
+
+.glow.two {
+    background: #00d9ff;
+    bottom: -100px;
+    left: -80px;
+    animation-delay: -4s;
+}
+
+@keyframes moveGlow {
+    from { transform: translate(0, 0); }
+    to { transform: translate(35px, 45px); }
+}
+
+.profile {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(17, 17, 31, .94);
+    border: 1px solid #343044;
+    border-radius: 25px;
+    padding: 40px 22px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    animation: showUp .8s ease;
+    box-shadow: 0 0 35px #8500ff18;
+}
+
+.profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg, #00eaff, #8b5cf6, #ff32bd, #00eaff
+    );
+    background-size: 300% 100%;
+    animation: rgb 5s linear infinite;
+}
+
+@keyframes rgb {
+    from { background-position: 0% 50%; }
+    to { background-position: 300% 50%; }
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+    background: linear-gradient(
+        90deg, #00eaff, #b15cff, #ff4fca
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #a8a8bd;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 14px;
+    color: #c9c9dc;
+    margin-bottom: 16px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 17px;
+    border: 1px solid #303044;
+    border-radius: 13px;
+    background: #191927;
+    color: white;
+    text-decoration: none;
+    direction: ltr;
+    text-align: left;
+    transition: .25s ease;
+}
+
+.links a:hover {
+    transform: translateY(-3px);
+    border-color: var(--brand);
+    box-shadow: 0 0 17px var(--brand-glow);
+    background: #222234;
+}
+
+.links a i {
+    font-size: 23px;
+    width: 27px;
+    text-align: center;
+    color: var(--brand);
+}
+
+.links a span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.facebook {
+    --brand: #1877f2;
+    --brand-glow: #1877f244;
+}
+
+.whatsapp {
+    --brand: #25d366;
+    --brand-glow: #25d36644;
+}
+
+.instagram {
+    --brand: #e4405f;
+    --brand-glow: #e4405f44;
+}
+
+.tiktok {
+    --brand: #25f4ee;
+    --brand-glow: #25f4ee44;
+}
+
+.discord {
+    --brand: #5865f2;
+    --brand-glow: #5865f244;
+}
+
+footer {
+    margin-top: 28px;
+    color: #77778e;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-dot {
+    color: #a855f7;
+}
+
+@media (max-width: 380px) {
+    .profile {
+        padding: 32px 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<main class="profile">
+
+    <h1>Faris</h1>
+
+    <p class="subtitle">
+        🎮 Gamer | 🎬 Video Editor<br>
+        Welcome To My Personal Website ✨
+    </p>
+
+    <p class="section-title">
+        Find me on Social media
+    </p>
+
+    <div class="links">
+
+        <!-- Facebook -->
+        <a class="facebook"
+           href="https://www.facebook.com/share/1NbXUFAjUQ/"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="whatsapp"
+           href="https://wa.me/201282479724"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a class="instagram"
+           href="https://www.instagram.com/abo_3l_ezz?utm_source=qr"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <!-- TikTok -->
+        <a class="tiktok"
+           href="https://www.tiktok.com/@abo_3l_ezz?_r=1&_t=ZS-9AqyTeF7rwy"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+
+        <!-- Discord -->
+        <a class="discord"
+           href="https://discord.com/users/1478828089202049167"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fa-brands fa-discord"></i>
+            <span>Discord</span>
+        </a>
+
+    </div>
+
+    <footer>
+        Made with <span class="footer-dot">♥</span> by Faris<br>
+        © 2026 All Rights Reserved
+    </footer>
+
+</main>
+
+</body>
+</html>
